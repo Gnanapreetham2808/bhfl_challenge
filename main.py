@@ -100,5 +100,5 @@ def process_bfhl(payload: DataInput) -> Dict[str, Any]:
 
 
 @app.get("/")
-def health():
-    return {"status": "ok"}
+def root():
+    return {"message": "FastAPI is live! Use POST /bfhl for the challenge."}
