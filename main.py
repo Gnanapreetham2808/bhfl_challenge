@@ -99,6 +99,10 @@ def process_bfhl(payload: DataInput) -> Dict[str, Any]:
         }
 
 
+@app.get("/bfhl")
+def get_bfhl_info() -> Dict[str, str]:
+    return {"message": "This endpoint only supports POST. Please send JSON with key 'data'."}
+
 @app.get("/")
 def root():
     return {"message": "FastAPI is live! Use POST /bfhl for the challenge."}
